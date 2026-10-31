@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#eef5f6">
+  <meta name="description" content="A calm daily study agenda.">
+  <title>Daylight Agenda</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <main class="agenda-app">
+    <header class="topbar"><a class="brand" href="#" aria-label="Daylight Agenda home"><span class="brand-sun" aria-hidden="true">○</span> DAYLIGHT <span class="brand-tail">/ STUDY</span></a><span class="save-note"><i></i> PRIVATE ON THIS DEVICE</span></header>
+    <section class="agenda-layout" aria-label="Study agenda">
+      <aside class="date-rail"><p class="rail-label">TODAY'S DATE</p><div class="date-number" id="date-number">--</div><p class="date-month" id="date-month">---</p><div class="rail-rule"></div><p class="rail-label">PROGRESS</p><div class="progress-ring"><strong id="progress-percent">0%</strong></div><p class="progress-note"><span id="open-count">0</span> left to finish</p><div class="rail-bottom-note">A STEADY DAY<br>IS A GOOD DAY.</div></aside>
+      <section class="agenda-content">
+        <div class="page-heading"><div><p class="day-label" id="day-label">DAILY AGENDA</p><h1>Study agenda</h1></div><div class="task-total"><strong id="total-count">0</strong><span>tasks</span></div></div>
+        <p class="intro-copy">Write it down, work through it, and let the day take shape.</p>
+        <form class="task-form" id="task-form" novalidate><label class="visually-hidden" for="task-title">Task name</label><input id="task-title" name="title" type="text" maxlength="120" placeholder="Add something to study..." autocomplete="off" required><label class="visually-hidden" for="task-course">Subject or course (optional)</label><input id="task-course" name="course" type="text" maxlength="60" placeholder="Course (optional)" autocomplete="off"><button type="submit" aria-label="Add task">+</button><p class="form-error" id="form-error" role="alert" hidden>Please enter a task.</p></form>
+        <div class="agenda-controls"><div class="filters" role="group" aria-label="Filter tasks"><button type="button" class="filter is-active" data-filter="all" aria-pressed="true">Everything <span id="all-count">0</span></button><button type="button" class="filter" data-filter="active" aria-pressed="false">To do</button><button type="button" class="filter" data-filter="completed" aria-pressed="false">Done</button></div><button type="button" class="clear-button" id="clear-completed" hidden>Clear finished</button></div>
+        <ol class="task-list" id="task-list" aria-label="Study agenda tasks"></ol>
+        <div class="empty-state" id="empty-state"><span class="empty-sun" aria-hidden="true">✳</span><p class="empty-title" id="empty-title">A blank page, for now.</p><p class="empty-copy" id="empty-copy">Add your first study task to get started.</p></div>
+        <footer class="content-footer"><span>MAKE SPACE TO FOCUS</span><span id="footer-count">0 TASKS</span></footer>
+      </section>
+    </section>
+  </main>
+</body>
+</html>
